@@ -12,7 +12,7 @@ class Items extends Component {
             <div class="container">
                 <div class="row">
                   <Item image={SRC} productDesciption="text1" productName="Breloczek Otwieracz" productPrice="1.00" productAvailable="Dostępny" />
-                  <Item image={SRC2}  productDesciption="text2" />
+                  <Item image={SRC2} productDesciption="text1" productName="Breloczek Otwieracz" productPrice="1.00" productAvailable="Dostępny" />
                 </div>
             </div>
           </div>
