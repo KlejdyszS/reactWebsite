@@ -31,8 +31,17 @@
     box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
 }
 
+
+.card-img-container {
+  overflow: hidden;
+  height: 100%;
+}
+
 .card-img-top {
+    min-height:4em;
     width: 100%;
+    display: block;
+    height: auto;
     border-top-left-radius: calc(.25rem - 1px);
     border-top-right-radius: calc(.25rem - 1px);
 }

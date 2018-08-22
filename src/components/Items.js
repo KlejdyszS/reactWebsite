@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Item from '../components/item';
 
-const SRC = "https://via.placeholder.com/350x150"
-const SRC2 = "https://via.placeholder.com/350x150"
+const SRC = "https://asgard.pl/png/product/17069.jpg"
+const SRC2 = "https://asgard.pl/png/product/09075.jpg"
 
 class Items extends Component {
   render() {
