@@ -6,7 +6,7 @@ class Item extends Component {
          <div>
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                  <div class="thumbnail">
+                  <div class="card-img-container">
                     <img src={this.props.image} alt="boohoo" className="card-img-top"/>
                   </div>
                   <div class="card-body">
