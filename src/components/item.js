@@ -13,24 +13,24 @@ class Item extends Component {
                       <p class="product-name">
                         {this.props.productName}
                       </p>
-                    <p class="product-productDesciption">
-                      {this.props.productDesciption}
-                    </p>
+                      <p class="product-productAvailable">
+                        {this.props.productAvailable}
+                      </p>
+
 
                     <div class="product-price-ammount">
                       <p class="product-productPrice">
                         {this.props.productPrice} <span class="product-productPriceInfo" > zł netto / 1 szt </span>
                       </p>
-                      <p class="product-productAvailable">
-                        {this.props.productAvailable}
-                      </p>
-
                     </div>
 
                 </div>
+                <div class="card-button" >
+                    <button type="button" class="product-button1">INFORMACJE</button>
+                </div>
 
                 <div class="card-button" >
-                    <button type="button" class="product-button">ZAMÓW</button>
+                    <button type="button" class="product-button2">ZAMÓW</button>
                 </div>
               </div>
              </div>

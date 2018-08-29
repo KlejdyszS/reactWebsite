@@ -16,6 +16,9 @@
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     padding: 1rem;
+    position: absolute;
+    bottom: 80px;
+    width: 100%;
 }
 
 .card-button{
@@ -61,20 +64,36 @@
 }
 
 .product-productPrice{
+  font-size: 27px;
   float:left;
   color: green;
 }
 
 .product-productAvailable{
   float:right;
-    color: green;
+  color: green;
+  font-size: 13px;
 }
 .product-productPriceInfo{
   font-size: 8px;
   color: black;
 }
 
-.product-button {
+.product-button1{
+  display: block;
+     width: 100%;
+     border: none;
+     background-color: GREY;
+     padding: 15px 15px;
+     font-size: 14px;
+     cursor: pointer;
+     text-align: center;
+     color: white;
+     position: absolute;
+  bottom: 55px;
+  left: 0;
+}
+.product-button2{
   display: block;
      width: 100%;
      border: none;

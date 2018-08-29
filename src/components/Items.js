@@ -1,19 +1,41 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import Item from '../components/item';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
+
+import { addData } from '../actions/index.js';
 
 const SRC = "https://asgard.pl/png/product/17069.jpg"
-const SRC2 = "https://asgard.pl/png/product/09075.jpg"
+const SRC2 = "https://asgard.pl/png/product/17069.jpg"
 
 class Items extends Component {
+
+  state = { product: '' };
+
+  componentWillMount(){
+      this.props.fetchData();
+  }
+
+  renderProducts() {
+      console.log (this.props.products)
+    return _.map(this.props.products, ({ item_image, productDesciption, productName, productPrice, productAvailable }) => {
+      return <Item image={item_image} productDesciption={productDesciption} productName={productName} productPrice={productPrice} productAvailable={productAvailable} />
+    });
+  }
+
+
   render() {
     return (
       <div>
           <div class="album py-5 bg-light">
             <div class="container">
                 <div class="row">
-                  <Item image={SRC} productDesciption="text1" productName="Breloczek Otwieracz" productPrice="1.00" productAvailable="Dostępny" />
-                  <Item image={SRC2} productDesciption="text1" productName="Breloczek Otwieracz" productPrice="1.00" productAvailable="Dostępny" />
+                  {this.renderProducts()}
                 </div>
+                <button onClick={addData}>
+               Add test product
+                </button>
             </div>
           </div>
       </div>
@@ -21,4 +43,8 @@ class Items extends Component {
   }
 }
 
-export default Items;
+function mapStateToProps(state) {
+  return { products: state.products };
+}
+
+export default connect(mapStateToProps, actions)(Items)
