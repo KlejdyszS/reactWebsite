@@ -22,12 +22,14 @@ export function fetchData() {
 }
 
 
-export function addData() {
-  Firebase.database().ref('products/' ).push({
-    item_image: 'https://asgard.pl/png/product/17069.jpg',
-    productDesciption: 'text2',
-    productName : 'Breloczek Otwieracz2',
-    productPrice : '1.002',
-    productAvailable : 'Niedostępny'
-  });
+export function addData(data) {
+  return dispatch => {
+    Firebase.database().ref('products/' ).push({
+      item_image: 'https://asgard.pl/png/product/17069.jpg',
+      productDesciption: 'text2',
+      productName : data,
+      productPrice : '1.002',
+      productAvailable : 'Niedostępny'
+    });
+  };
 }
