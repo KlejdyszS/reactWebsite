@@ -29,9 +29,6 @@ class Items extends Component {
     return (
       <div>
           <div class="album py-5 bg-light">
-          <button onClick={addData}>
-         Add test product
-          </button>
             <div class="container">
                 <div class="row">
                   {this.renderProducts()}
