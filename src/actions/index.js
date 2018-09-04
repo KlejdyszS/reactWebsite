@@ -25,11 +25,11 @@ export function fetchData() {
 export function addData(data) {
   return dispatch => {
     Firebase.database().ref('products/' ).push({
-      item_image: 'https://asgard.pl/png/product/17069.jpg',
+      item_image: data.productImage,
       productDesciption: 'text2',
-      productName : data,
-      productPrice : '1.002',
-      productAvailable : 'Niedostępny'
+      productName : data.productName,
+      productPrice : data.productPrice,
+      productAvailable : data.productAvailable
     });
   };
 }

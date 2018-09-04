@@ -4,7 +4,7 @@ class Item extends Component {
   render() {
     return (
          <div>
-            <div class="col-md-4">
+            <div class="col-md-4"  key={this.props.key} >
                 <div class="card mb-4 shadow-sm">
                   <div class="card-img-container">
                     <img src={this.props.image} alt="boohoo" className="card-img-top"/>

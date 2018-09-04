@@ -19,8 +19,9 @@ class Items extends Component {
 
   renderProducts() {
       console.log (this.props.products)
-    return _.map(this.props.products, ({ item_image, productDesciption, productName, productPrice, productAvailable }) => {
-      return <Item image={item_image} productDesciption={productDesciption} productName={productName} productPrice={productPrice} productAvailable={productAvailable} />
+    return _.map(this.props.products, (product, key) => {
+      console.log (product)
+      return <Item key={key.toString()} image={product.item_image} productDesciption={product.productDesciption} productName={product.productName} productPrice={product.productPrice} productAvailable={product.productAvailable} />
     });
   }
 
